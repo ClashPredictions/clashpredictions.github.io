@@ -12,3 +12,5 @@ Pick match winners and follow how each result changes the bracket, leaderboard, 
 - Projected points, seeding, and tiebreaker explanations.
 - Mobile-friendly match order and multiple language options.
 - Predictions saved locally in your browser.
+
+A self-contained static website with embedded artwork, fonts, and translations. No account or server is needed. Predictions are personal scenarios, not official results.
