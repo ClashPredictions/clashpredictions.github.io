@@ -530,7 +530,7 @@ function liveSeptember(){
 }
 function render(){
  $('undoPick').disabled=undoStack.length===0;
- const confirmedSeptember={q0:'ZOOS ESPORTS',q1:'REPOTTED GAMING',q2:'WIN OR DIE',q3:'VATIC',l0:'ASSASIN CREW',l1:'ICE CREAM BROS',s0:'REPOTTED GAMING',s1:'WIN OR DIE'};
+ const confirmedSeptember={q0:'ZOOS ESPORTS',q1:'REPOTTED GAMING',q2:'WIN OR DIE',q3:'VATIC',l0:'ASSASIN CREW',l1:'ICE CREAM BROS',s0:'REPOTTED GAMING',s1:'WIN OR DIE',r1:'ZOOS ESPORTS',r0:'VATIC',u:'REPOTTED GAMING',t:'VATIC',f:'WIN OR DIE',g:'REPOTTED GAMING'};
  for(const [id,w] of Object.entries(confirmedSeptember)){
   const m=doubleElimination(septSeeds,septPicks).byId[id];
   if(m.a&&m.b&&(w===m.a||w===m.b))septPicks[id]={a:m.a,b:m.b,w};
@@ -542,6 +542,11 @@ function render(){
  $('septSeeds').innerHTML=septSeeds.map((name,i)=>'<div class="seed-entry"><span>Seed '+(i+1)+'</span><strong>'+esc(name)+'</strong></div>').join('');
  $('order').innerHTML=bracketView(septBracket,true,septSeeds,'sept');
  const complete=!!septBracket.champion;
+ if(complete&&septBracket.matches.every(m=>m.confirmed)&&!prediction.parentElement.classList.contains('completed-mf')){
+  const archive=document.createElement('details');archive.className='panel completed-mf';
+  archive.innerHTML='<summary><span>September MF</span> · <span>Complete</span></summary>';
+  prediction.before(archive);archive.append(prediction);
+ }
  const clinched=clinchedTicket(septBracket,septSeeds,seed.teams.filter(t=>t.ticket).map(t=>t.name));
  const ticketBox=$('ticket').closest('.ticket,.september-ticket-summary');
  const ticketAsset=document.querySelector('.ticket-art').src;
