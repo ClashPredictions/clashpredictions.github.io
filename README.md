@@ -1,4 +1,4 @@
-# Clash Predictor — TH18 & TH15
+# Clash Predictor — TH18, TH15, TH12 & TH9
 
 An interactive Clash of Clans tournament predictor covering the September Monthly Finals, Last Chance Qualifier, and World Championship / Town Hall Cup Finals.
 
@@ -6,7 +6,7 @@ Pick match winners and follow how each result changes the bracket, leaderboard, 
 
 ## Features
 
-- TH18 and TH15 competitions with separate predictions.
+- TH18 and TH15, TH12 and TH9 competitions with separate predictions.
 - Upper and lower brackets, including Grand Final deciders.
 - Golden Tickets revealed as soon as qualification is guaranteed.
 - Projected points, seeding, and tiebreaker explanations.
